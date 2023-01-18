@@ -1,0 +1,36 @@
+<footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+    <div class="container flex px-3 py-8 ">
+        <div class="w-full mx-auto flex flex-wrap">
+            <div class="flex w-full lg:w-1/2 ">
+                <div class="px-3 md:px-0">
+                    <h3 class="font-bold text-gray-900">Contact Us</h3>
+                    <p class="py-4">
+                        Call: +389(0)2 3216640 E-mail: info@artist-macedonia.com
+                    </p>
+                    <p class="py-4">Artist Sistems DOOEL Vasil Gjorgov br.9, Skopje</p>
+                </div>
+            </div>
+            <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+                <div class="px-3 md:px-0">
+                    <h3 class="font-bold text-gray-900">Social</h3>
+                    <ul class="list-reset items-center pt-3">
+                        <li>
+                            <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Add
+                                social links</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{{ url_for('static', filename='js/shoppingcart.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% if not current_user.is_authenticated %}
+    <script src="{{ url_for('static', filename='js/popups.js') }}"></script>
+{% endif %}
+
+</body>
+
+</html>
